@@ -11,6 +11,13 @@ Pairing: every action here gets a **why**. Hypothesis form:
 Keep this file short. Longer writeups go in the research log folder
 (one subject, date + title). Local agent contract: `AGENTS.md` (gitignored).
 
+## 2026-08-20 — Field CV renderer (face A)
+
+- Added `site/index.html` as a renderer of `silos/` + `RESEARCH_MAP.md`: HIRE default (live cards + instrument + plaque), LAB threads, PATH changelog, trail shaded, contamination as a hole, names dimmed. Why: the git already is the information architecture; a recruiter face should not invent a new one.
+- Hypothesis: someone who never reads a paper still leaves with the 0–25 sweep, the sealed route, and hybrid retrieval; a researcher hops the map in the same chrome.
+- Agent: Grok (xAI)
+- Research: `research_logs/2026-08-20_field-cv-site.md`
+
 ## 2026-08-20 — Live/trail silos and usable README
 
 - Rewrote README as working research: smarter runtimes make smarter AI; agency and continuity over accuracy; papers may disagree; do not cross-reference them. Why: this git is to be used, not investigated.

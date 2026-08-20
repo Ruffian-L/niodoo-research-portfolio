@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jason Van Pham — Niodoo working research. Smarter runtimes make smarter AI. Live receipts, trail, hashed experiments.">
+  <title>Jason Van Pham — Niodoo field</title>
+  <link rel="stylesheet" href="field.css">
+</head>
+<body data-face="hire" data-dream="off">
+  <a class="skip" href="#inspect">Skip to inspect</a>
+
+  <header class="plaque">
+    <div class="plaque-row">
+      <div>
+        <p class="eyebrow">Niodoo · working research</p>
+        <h1>Jason Van Pham</h1>
+        <p class="role">Runtime and research lead. Weights never change. The loop is the agent.</p>
+      </div>
+      <div class="plaque-contact">
+        <a href="mailto:jasonvanpham@niodoo.com">jasonvanpham@niodoo.com</a>
+        <a href="https://github.com/Ruffian-L">github.com/Ruffian-L</a>
+        <a href="https://github.com/Ruffian-L/niodoo-research-portfolio">this git</a>
+      </div>
+    </div>
+    <p class="pitch">Smarter runtimes make smarter AI.</p>
+    <p class="pitch-sub">Agency, continuity, understanding. The object is a frozen model that knows where it is well enough to act, write something down, and still have it after the process dies.</p>
+
+    <div class="faces" role="tablist" aria-label="Face">
+      <button type="button" role="tab" id="face-hire" aria-selected="true" data-face="hire">HIRE</button>
+      <button type="button" role="tab" id="face-lab" aria-selected="false" data-face="lab">LAB</button>
+      <button type="button" role="tab" id="face-path" aria-selected="false" data-face="path">PATH</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="field" id="field" aria-label="Research field">
+      <p class="band live-band">Live · take these</p>
+      <div class="nodes live-nodes" id="live-nodes"></div>
+
+      <p class="band trail-band">Trail · receipts, not a scoreboard</p>
+      <div class="nodes trail-nodes" id="trail-nodes"></div>
+
+      <p class="band lab-band">Threads · LAB</p>
+      <div class="nodes lab-nodes" id="lab-nodes"></div>
+
+      <p class="band names-band">Dated artifacts · not a brand</p>
+      <div class="nodes names-nodes" id="names-nodes"></div>
+
+      <p class="band path-band">PATH · mutation spine</p>
+      <div class="nodes path-nodes" id="path-nodes"></div>
+    </section>
+
+    <aside class="inspect" id="inspect" aria-live="polite">
+      <header class="inspect-head">
+        <span class="chrome">INSPECT</span>
+        <span class="inspect-silo" id="inspect-silo"></span>
+        <button type="button" id="dream-btn" class="dream-btn" aria-pressed="false">DREAM</button>
+      </header>
+      <p class="dream-hint" id="dream-hint">Forward walks the path. Reverse undreams it.</p>
+      <h2 id="inspect-title"></h2>
+      <p class="inspect-file" id="inspect-file"></p>
+      <h3>Result</h3>
+      <div class="inspect-body" id="inspect-result"></div>
+      <h3>What to take</h3>
+      <div class="inspect-body" id="inspect-take"></div>
+      <h3>Where</h3>
+      <div class="inspect-body" id="inspect-where"></div>
+    </aside>
+  </main>
+
+  <noscript>
+    <section class="noscript wrap">
+      <h2>Without JavaScript</h2>
+      <p>Same frozen 8B. Stock llama.cpp is a flat line at 24. Physics sweeps 0–25. Teach, die, two cold processes, <code>[5, 4, 3, 2, 1, 5]</code> twice. Hybrid retrieval nDCG@10 0.7822; dense-only 0.6291 published.</p>
+      <ul>
+        <li><a href="../silos/live/runtime-moves-the-weights.md">Knobs move the model</a></li>
+        <li><a href="../silos/live/parb-25-vs-24.md">25 vs 24</a></li>
+        <li><a href="../silos/live/agency-sealed-route.md">Sealed route</a></li>
+        <li><a href="../SplatRagBench_Hybrid_Retrieval.md">SplatRagBench</a></li>
+        <li><a href="../silos/trail/README.md">Trail</a></li>
+        <li><a href="../provenance/CONTAMINATION.md">Contamination</a></li>
+        <li><a href="../RESEARCH_MAP.md">Research map</a></li>
+      </ul>
+    </section>
+  </noscript>
+
+  <footer class="foot">
+    <p>Renderer of <code>silos/</code> + <code>RESEARCH_MAP.md</code>. Do not merge live and trail. Open <code>site/index.html</code> from the repo, or serve this folder.</p>
+    <p class="keys">Keys: <kbd>1</kbd>–<kbd>5</kbd> live · <kbd>h</kbd> hire · <kbd>l</kbd> lab · <kbd>p</kbd> path · <kbd>d</kbd> dream</p>
+  </footer>
+
+  <script src="field.js"></script>
+</body>
+</html>

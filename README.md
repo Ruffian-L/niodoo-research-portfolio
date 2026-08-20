@@ -21,6 +21,8 @@ Do not merge the silos into a scoreboard. Do not rank them. They are two drawers
 
 The living index is [`RESEARCH_MAP.md`](RESEARCH_MAP.md): every paper, its active hypothesis, last mutation, and status. Dated local names (Lumina, lumen, echo, Shep, Echo Memoria) are in [`NAMES.md`](NAMES.md). They are **dated local artifacts**, not a brand.
 
+The field face of this git is [`site/index.html`](site/index.html). It renders `silos/` and the map. It does not invent a new layout. Open the file, or serve the `site/` folder.
+
 ## What we are actually measuring
 
 **Agency. Continuity. Understanding.**
