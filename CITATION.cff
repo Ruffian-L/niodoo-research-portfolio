@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you cite this portfolio, cite ULTIMA_NIODOO.md as the current overview, and the specific paper for the result you are using."
+title: "Niodoo research portfolio"
+type: software
+authors:
+  - family-names: "Pham"
+    given-names: "Jason Van"
+    email: "jasonvanpham@niodoo.com"
+    affiliation: "Niodoo"
+date-released: 2026-08-20
+license: MIT
+url: "https://github.com/Ruffian-L/niodoo-research-portfolio"
+abstract: "Curated research papers for Niodoo, Jason Van Pham's runtime that applies physics-inspired forces to a frozen language model's hidden state, with a model-emitted control channel and a durable store outside the weights. Losses stay in the record. Papers spawned from unasked plan criteria are not in this git."
+keywords:
+  - Niodoo
+  - hidden-state steering
+  - inference-time control
+  - frozen language models
+  - adaptive agency
+  - operational self-location
+  - persistent memory

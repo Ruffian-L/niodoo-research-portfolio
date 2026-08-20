@@ -1,0 +1,31 @@
+# Working junk
+__pycache__/
+*.pyc
+.DS_Store
+
+# Word dumps and rendered PDFs — not the citable markdown
+*.docx
+*.pdf
+
+# Informal / not a scoreboard
+Northstar.docx.txt
+heart_Vibe*
+
+# Symlink into Documents/Writing; tracked copies live in sources/
+Link to Writing
+
+# Backup of a rewrite; inventory of the 2026-08-17 pack
+ULTIMA_NIODOO.longform_backup.md
+Ultima_Last_Testament.md
+
+# Plan-invented papers. On disk for custody. Not this git.
+# See provenance/CONTAMINATION.md
+Emitted_Control_Tags_Path_B.md
+render_emitted_control_tags.py
+Echo_Memoria_Named_Persistent_Memory.md
+Lumina_Self_Naming_Runtime.md
+Shep_Named_Local_Research_Team.md
+Dream_Cycle_Ten_Thousand_Memories.md
+
+# Home-and-drive path dump — not a paper
+gathered_20260818/LEDGER_INDEX.md
