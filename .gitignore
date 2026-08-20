@@ -26,10 +26,7 @@ render_emitted_control_tags.py
 # Home-and-drive path dump — not a paper
 gathered_20260818/LEDGER_INDEX.md
 
-# Local agent contract. Not GitHub. (research house)
-AGENTS.md
-AGENTS*.md
-AGENT.md
+# Local agent dirs stay off GitHub. AGENTS.md is tracked. (research house)
 CLAUDE.md
 Claude.md
 CLAUDE.local.md

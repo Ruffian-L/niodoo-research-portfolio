@@ -42,7 +42,7 @@ Do not reconcile papers against each other. Use `RESEARCH_MAP.md` to find a row,
 | `sources/` | Citation table, claim package, force map, sleuth |
 | `research_logs/` | Subject logs |
 | `scripts/pair_log.sh` | Changelog + research-log pairing |
-| `site/` | Field CV. Renders silos + map. HIRE / LAB / PATH. |
+| `FACE.md` | The picture is SplatRAG v3 (`sp start`). Not a second website. |
 
 ## On disk, not this git
 

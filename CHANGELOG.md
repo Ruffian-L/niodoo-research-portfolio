@@ -9,7 +9,15 @@ Pairing: every action here gets a **why**. Hypothesis form:
 - We mutated Z. Results matched. LFG.
 
 Keep this file short. Longer writeups go in the research log folder
-(one subject, date + title). Local agent contract: `AGENTS.md` (gitignored).
+(one subject, date + title). Agent contract: `AGENTS.md` (tracked).
+
+## 2026-08-20 — Drop the cheap site. Face is SplatRAG v3.
+
+- Removed `site/` (card renderer). Why: it was a second website. The full-force look is already Basin Field in splatrag-clean / `sp start` (COMMAND, DREAM, INSPECT).
+- Added `FACE.md`. Why: so the next agent does not invent another UI module here.
+- Hypothesis: people open `sp start` and read silo cards in INSPECT, instead of a hire landing page.
+- Agent: Grok (xAI)
+- Research: `research_logs/2026-08-20_drop-cheap-site.md`
 
 ## 2026-08-20 — Field CV renderer (face A)
 
@@ -35,4 +43,11 @@ Keep this file short. Longer writeups go in the research log folder
 - Hypothesis: agents will stop and organize when the folder is wrong, instead of wandering or looking backward first.
 - Agent: Grok (xAI)
 - Research: `research_logs/2026-08-20_research-house-protocol.md`
+
+## 2026-08-20 — Un-ignore AGENTS.md
+
+- Dropped `AGENTS.md` / `AGENTS*.md` from `.gitignore` and staged the contract files. Why: Grok skips gitignored project files, so the house law never loaded.
+- Hypothesis: agents will now read repo `AGENTS.md` instead of only `~/.grok/AGENTS.md`.
+- Agent: Grok (xAI)
+- Research: `research_logs/2026-08-20_ungitignore-agents-md.md`
 

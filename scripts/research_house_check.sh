@@ -14,7 +14,7 @@ need_file() {
   fi
 }
 
-need_file "$ROOT/AGENTS.md" "AGENTS.md (local contract)"
+need_file "$ROOT/AGENTS.md" "AGENTS.md (house contract)"
 need_file "$ROOT/CHANGELOG.md" "CHANGELOG.md"
 need_file "$ROOT/scripts/pair_log.sh" "scripts/pair_log.sh"
 
@@ -29,15 +29,13 @@ fi
 
 if [[ -d "$ROOT/.git" || -f "$ROOT/.git" ]]; then
   if git -C "$ROOT" check-ignore -q AGENTS.md 2>/dev/null; then
-    say "ok   AGENTS.md is gitignored"
+    say "MISS AGENTS.md is gitignored — drop it from .gitignore"
+    fail=1
+  elif git -C "$ROOT" ls-files --error-unmatch AGENTS.md >/dev/null 2>&1; then
+    say "ok   AGENTS.md is tracked"
   else
-    if git -C "$ROOT" ls-files --error-unmatch AGENTS.md >/dev/null 2>&1; then
-      say "MISS AGENTS.md still tracked — git rm --cached AGENTS.md"
-      fail=1
-    else
-      say "MISS AGENTS.md not ignored"
-      fail=1
-    fi
+    say "MISS AGENTS.md not ignored but untracked — git add AGENTS.md"
+    fail=1
   fi
 else
   say "note no git in this tree"

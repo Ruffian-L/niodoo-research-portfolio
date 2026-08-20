@@ -57,7 +57,7 @@ if [[ ! -f "$CHANGELOG" ]]; then
 
 Research repo. Not production unless Jason says so.
 Short whys here. Longer subject logs in the research log folder.
-Local agent contract: `AGENTS.md` (gitignored).
+Agent contract: `AGENTS.md` (tracked).
 
 EOF
 fi
