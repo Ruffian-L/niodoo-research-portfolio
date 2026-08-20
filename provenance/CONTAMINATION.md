@@ -4,8 +4,7 @@
 **Owner:** Jason Van Pham
 
 This folder is the stop layer for papers that look like research product and
-are not. The files named below remain on disk in `Documents/Papers/` for
-custody. They are gitignored. They are not the portfolio.
+are not. The Path B extra-tag manuscript remains on disk, gitignored.
 
 ## The tags paper
 
@@ -35,26 +34,17 @@ prompt taught the request vocabulary, so printed tags are evidence of
 symbolic policy use, not of emergent metacognition. Do not revive that claim
 from the excluded file.
 
-## Other unasked papers from the same pattern
-
-On 2026-08-17 a prior-art-sleuth plan listed extra paper topics as acceptance
-criteria. Short drafts were then written to close those rows. The topics were
-not Jason asking for a paper. They were a planner filling a criteria cap.
-
-Kept on disk, excluded from this git:
+## What stayed out
 
 | File | Why it is out |
 |------|----------------|
 | `Emitted_Control_Tags_Path_B.md` | Extra tags in acceptance criteria, then a paper about those tags |
-| `Echo_Memoria_Named_Persistent_Memory.md` | Chronology note spawned as a "paper" row, not a commissioned manuscript |
-| `Lumina_Self_Naming_Runtime.md` | Same: naming chronology vs Fable, not a requested paper |
-| `Shep_Named_Local_Research_Team.md` | Same: named-partner chronology vs Claude Code teams |
-| `Dream_Cycle_Ten_Thousand_Memories.md` | Same: visibility-line note written to close a plan row |
 | `Ultima_Last_Testament.md` | Inventory of that pack, not a research result |
 
-The **dated events** those notes point at can still be cited from the
-citation table, the claim package, and public repos. The events are not
-deleted. The unasked manuscripts are not this portfolio.
+Echo / Lumina / Shep / dream-cycle chronology notes are now in git as
+**dated local artifacts** (`NAMES.md`, `RESEARCH_MAP.md`). They are not a
+brand. The Path B *mechanism* is in `ULTIMA_NIODOO.md` §3.3. The Path B
+*manuscript* stays out.
 
 ## What this is not
 
