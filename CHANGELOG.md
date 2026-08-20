@@ -11,6 +11,13 @@ Pairing: every action here gets a **why**. Hypothesis form:
 Keep this file short. Longer writeups go in the research log folder
 (one subject, date + title). Agent contract: `AGENTS.md` (tracked).
 
+## 2026-08-20 — Research demo on SplatRAG v3
+
+- Demo button loads ULTIMA + live/trail/paper basins in Basin Field, not synthetic filler and not the personal 41k dump. Why: the public face is the instrument doing the job.
+- Boot stays on demo. Live store is opt-in. Open paper slots on the rim. Why: website push should not ship personal memory.
+- Agent: Grok (xAI)
+- Research: `research_logs/2026-08-20_splatrag-research-demo.md`
+
 ## 2026-08-20 — Drop the cheap site. Face is SplatRAG v3.
 
 - Removed `site/` (card renderer). Why: it was a second website. The full-force look is already Basin Field in splatrag-clean / `sp start` (COMMAND, DREAM, INSPECT).

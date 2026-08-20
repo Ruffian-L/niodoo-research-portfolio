@@ -2,14 +2,13 @@
 
 This git is papers and receipts. It is **not** a second website.
 
-The field, COMMAND, DREAM, and INSPECT chrome already exist:
-
-- Engine: `splatrag-clean` (3.0.0)
-- Viewer: Basin Field (`sp start`)
-- Map: `~/Hub/Projects/splatrag/V3.md`
+The field is Basin Field (`sp start`). **Demo** is ULTIMA + the silo cards
+inside that chrome. **Live** is the personal store — leave it off the
+public site.
 
 ```
 sp start
 ```
 
-Live cards in this git (`silos/live/`, `silos/trail/`) are what INSPECT should read when you click a splat. Do not rebuild that chrome here.
+Click Demo if you are on the personal dump. Inspect a basin: result / take / where.
+Open paper slots sit on the rim for later rows in `RESEARCH_MAP.md`.
