@@ -6,20 +6,21 @@ Job-facing 60-second page: [`HIRE.md`](HIRE.md). Machine-readable rows: [`MASTER
 
 This file is the **volume index**. It exists so the body of work is visible as one job artifact. It does not reconcile papers against each other.
 
-**How it was built (this pass):** `gh repo list Ruffian-L` (17 public + 14 private, 2026-08-22), this git's `RESEARCH_MAP.md` / `CATALOG.md` / silos, and reachable local paths on NVMe + ghost_team. Local-only rows were opened, not marked pending by default.
+**How it was built:** `gh repo list Ruffian-L` (17 public + 14 private, 2026-08-22), this git's `RESEARCH_MAP.md` / `CATALOG.md` / silos, and reachable local paths. Remainder pass (same day): full 78G jsonl scan, wobble extract scored, private repos opened from GitHub + local trees.
 
 | Count | What |
 |------:|------|
 | 17 | public GitHub repos |
-| 14 | private GitHub repos (listed, not expanded) |
+| 14 | private GitHub repos (now claim + local/GitHub evidence) |
 | 15 | live papers / thread drafts in `RESEARCH_MAP.md` |
 | 4 | dated local-name artifacts |
 | 7 | archive papers / bundles (May white paper + 32 deep dives) |
 | 3 | live silo cards |
 | 5 | trail silo cards |
 | 6 | `LOCK.json` packs opened on NVMe |
-| 4,721 | December-style scored rows (`seed` / `question_id` / `verdict`) opened locally |
-| 103G | SplatRAG niodoo-telemetry silo on NVMe (hashed extract, ingest incomplete) |
+| 4,721 | December-style scored rows (`seed` / `question_id` / `verdict`) |
+| 2,353,986 | machine telemetry jsonl records (full scan, 0 parse errors) |
+| 178 | wobble staged jsonl rows (14 files); 2 recovered scored cells |
 
 ---
 
@@ -59,24 +60,26 @@ All owner `Ruffian-L`. Dates from GitHub API 2026-08-22.
 
 ---
 
-## Private GitHub repos (exist; not expanded)
+## Private GitHub repos (opened this pass)
 
-| repo | created | updated | lang | GitHub description |
-|------|---------|---------|------|--------------------|
-| splatrag | 2026-07-30 | 2026-08-05 | Rust | Local Rust AI-memory store: cold log, BM25 + keyed HNSW, Gaussian-splat field, picker |
-| niodoo-live-private | 2026-07-23 | 2026-07-23 | Rust | Private working mirror of niodoo-live. Not for publication |
-| niodoo-runtime | 2026-06-13 | 2026-06-13 | Rust | (empty description) |
-| latent-trajectory-codec | 2026-03-28 | 2026-07-26 | Python | 64D transport experiments (Unicode + VQ/RAVE-style paths) |
-| c-council | 2026-07-04 | 2026-07-05 | Rust | The council |
-| Lumina-Concourse | 2026-03-06 | 2026-03-06 | Rust | EmbedSwarm / Ouroboros Reactor — hydrodynamic thought brain |
-| niodoo-inference-steering | 2026-02-17 | 2026-02-20 | Rust | work in progress |
-| supersonic-semantic | 2026-02-20 | 2026-02-20 | — | (empty) |
-| niodoo-shimeji | 2025-11-15 | 2026-02-16 | Python | Autonomous embodied desktop companion (Gemini / Shimeji) |
-| niodoo-ai | 2025-11-03 | 2026-02-16 | — | Niodoo AI repository |
-| bullshitdetector | 2025-11-17 | 2026-02-16 | Rust | Magic-number / smell detector |
-| BS-MCP-REFACTOR | 2025-10-13 | 2026-02-16 | HTML | (empty) |
-| Leo | 2025-10-10 | 2026-02-16 | — | (empty) |
-| ParaNIODo.O | 2025-08-05 | 2025-09-09 | Python | (empty) |
+Still private. Claim + evidence from GitHub contents and local trees. No personal memory dumped.
+
+| repo | created | updated | lang | one-line claim | evidence |
+|------|---------|---------|------|----------------|----------|
+| splatrag | 2026-07-30 | 2026-08-05 | Rust | v3 local Gaussian-splat memory store (cold log, BM25+HNSW, picker) | GitHub private. Live tree: `splatrag-clean` **6.0G**, `Cargo.toml` name=splatrag **3.0.0**. Python rebuild stub: `Hub/Projects/splatrag/splatrag` 90M |
+| niodoo-live-private | 2026-07-23 | 2026-07-23 | Rust | Private working mirror of the live runtime. Not for publication | local `/home/ruffianl/Hub/Projects/niodoo/niodoo-live-private` 74M; last commit `233429c` 2026-07-15. `SCOREBOARD.md` + `WHITEPAPER.md` |
+| niodoo-runtime | 2026-06-13 | 2026-06-13 | Rust | Clean rebuild lane: mock backend, command-gated claims, no hidden control paths | GitHub `README.md`: `cargo test`; `cargo run -- run --backend mock`. Excludes CUDA/SplatRAG/GGUF |
+| latent-trajectory-codec | 2026-03-28 | 2026-07-26 | Python | 64D latent transport + VQ codebook | local ghost 32M. `CLAIMS.md`: M5 8/8 specialists; M7.5 VQ 256 / 0 dead / 320× / exact round-trip; M8 4 forcing types, max energy < 0.192 |
+| c-council | 2026-07-04 | 2026-07-05 | Rust | Roundtable: isolated AI voices, no shared tools/MCP/keys | crate name `roundtable`. `ISOLATION.md`: spawn via argv, empty cwd, API keys stripped |
+| Lumina-Concourse | 2026-03-06 | 2026-03-06 | Rust | EmbedSwarm 9-node thermodynamic / Three Gemmas scaffold | GitHub README (Kuramoto-Adler, Ginzburg-Landau). 79 KB disk |
+| niodoo-inference-steering | 2026-02-17 | 2026-02-20 | Rust | Early steering WIP | GitHub has `Algo_WIP.txt` / `Algo WIP.docx`, `benchmarks/`, `demo.sh`. README is a stub |
+| niodoo-shimeji | 2025-11-15 | 2026-02-16 | Python | Gemini-powered Shimeji desktop companion | GitHub description; 630 KB |
+| ParaNIODo.O | 2025-08-05 | 2025-09-09 | Python | 2025 companion / sprite stack (click-through, always-on-top) | local ghost `ParaNIODo.O-main` **3.8G** (mp4 + guides). GitHub 3.8G |
+| bullshitdetector | 2025-11-17 | 2026-02-16 | Rust | Magic-number / smell detector | local 264K; `Cargo.toml` 1.0.0 |
+| BS-MCP-REFACTOR | 2025-10-13 | 2026-02-16 | HTML | MCP refactor dump | GitHub 38 MB; no local tree indexed |
+| Leo | 2025-10-10 | 2026-02-16 | — | Screenshot dump, not a research crate | GitHub 16 MB, mostly PNGs. Not expanded |
+| niodoo-ai | 2025-11-03 | 2026-02-16 | — | Empty husk | GitHub size 0; contents = `README.md` only |
+| supersonic-semantic | 2026-02-20 | 2026-02-20 | — | Empty husk | GitHub size 0 |
 
 ---
 
@@ -86,7 +89,7 @@ These are on the machine. They are part of the volume even when the public repo 
 
 | tree | path | what it is |
 |------|------|------------|
-| niodoo-live | `/home/ruffianl/Hub/Projects/niodoo/niodoo-live` | Live physics runtime. PARB 25 vs 24. Three God-Zone `LOCK.json` packs |
+| niodoo-live | `/home/ruffianl/Hub/Projects/niodoo/niodoo-live` **75G** | Live physics runtime. PARB 25 vs 24. Three God-Zone `LOCK.json` packs. Git remote is `niodoo-hidden-state-steering` |
 | dual-stream-soul | `/home/ruffianl/Hub/Projects/niodoo/dual-stream-soul` | Dual-stream / free-land LOCK packs (2026-08-08) |
 | hydrodynamic-swarm-3surface | `/home/ruffianl/Hub/Projects/hydro/hydrodynamic-swarm-3surface` | Current hydro 3-surface seat (chat residual, eval harness) |
 | splatrag-clean | `/media/ruffianl/ghost_team/02_projects/projects/splatrag-clean` (`sp start`) | Basin Field face. Demo = ULTIMA + silo cards. Not the personal dump |
@@ -173,9 +176,20 @@ See `NAMES.md`. Chronology, not product.
 | pending_ingest | 14,709 |
 | machine jsonl | `corpus/machine/niodoo-telemetry.jsonl` |
 | schema (first 20 rows) | `id`, `content_sha256`, `file_sha256`, `source_path`, `drive`, `mtime`, `extracted_at`, `type`, `domain`, `silo`, `silo_domain`, `record_kind` |
-| ledger sample | `ledger/ingested.jsonl` — first row ingested 2026-08-10 from `niodoo-hidden-state-steering/.../route_telemetry_on.jsonl` (sha256 `cbd032ab…`, 49 emitted) |
+| ledger | `ledger/ingested.jsonl` **6,312** rows, status=ingested all, **112,401** emitted sum. Domains: niodoo-legacy 3333, niodoo-run 2219, niodoo-telemetry 613, god-zone 82, niodoo-route 45 |
+| full scan (2026-08-22, 615s, 0 parse errors) | **n = 2,353,986** = STATUS `unique_records`. bytes 83,022,319,021 = STATUS `machine_corpus_bytes` |
 
-**Outcome column:** this silo is a **hashed extract**, not a judged bench. There is no PARB-style verdict on the 2.35M unique records. Ingest is incomplete (`ingested_ok` 6,311 vs `unique_records` 2,353,986). First 20 machine rows are file-extract hashes, not answers.
+**Outer census (every record):**
+
+| type | n | domain | n | kind | n | drive | n |
+|------|--:|--------|--:|------|--:|-------|--:|
+| log | 1,864,362 | niodoo-log | 1,864,362 | line | 2,335,910 | backup_sandisk1 | 1,427,913 |
+| niodoo-telemetry | 301,980 | niodoo-run | 301,980 | file | 17,538 | backup2 | 565,011 |
+| niodoo-run | 186,329 | niodoo-legacy | 180,053 | file_meta | 538 | ghost_team | 211,799 |
+| chat_raw-turns | 476 | niodoo-route | 6,189 | | | nvme | 149,263 |
+| ledger | 470 | (10 smaller domains) | | | | | |
+
+**Outcome column:** not a judged bench. First **500k** records: string `verdict` in **2,572**, `"seed"` in **1,664**, `question_id` in **0**. The 4,721 December scored rows live in Inbox, not as a uniform column here. Ingest remains **6,312 / 2,353,986**. This pass **characterized** the dump; it did not run the ingest.
 
 Cold/hot/indexes on NVMe are small (145M / 141M / 115M) relative to the 102G corpus dump.
 
@@ -208,7 +222,26 @@ Sample C fail text (lock 065411Z): `<lock>answer=2</lock>` on “r in strawberry
 
 This is the **2025-12-19 protocol family** of `silos/trail/parb-29-9-vs-41-6.md`. Has seed / question_id / verdict. **Not** the live 25 vs 24 seat.
 
-Related wobble dumps (not scored in this pass): 14 files under `/home/ruffianl/Hub/Projects/splatrag/staging-niodoo-telemetry/niodoo-run/wobble_sweep_20251218_*.jsonl`.
+### 3b. Wobble-snap-back rainbow sweep (2025-12-18) — scored from staged extract
+
+Path: `/home/ruffianl/Hub/Projects/splatrag/staging-niodoo-telemetry/niodoo-run/wobble_sweep_20251218_*.jsonl`  
+14 files, **171 KB**, **178** `telemetry_line` wrappers, 0 parse errors. Source markdown/CSV on ghost (`.../niodoo-20260804T185916Z-1-001/niodoo/artifacts/`) is gone; reconstruction is from the jsonl.
+
+Three stamps of the same protocol: `020255`, `020338`, `020452`.
+
+| field | value |
+|-------|-------|
+| header | “Niodoo Wobble-Snap-Back Rainbow Sweep” · **Total Runs: 192** |
+| grid | physics_blend `[0.8, 1.2, 1.6, 2.5]` × repulsion `[-0.8, -1.3, -2.0]` × gravity_well `[0.4, 0.6, 0.9, 1.2]` × orbit_speed `[0.15, 0.25]` × T=0.7 × σ=0.05 × max_steps 768 → **96** configs (192 ⇒ two prompts or two seeds; only one prompt recovered) |
+| prompt recovered | TroyWeight — “pound of lead or pound of gold”; expected Lead (avoirdupois > troy) |
+| scored cells in extract | **2** |
+
+| prompt | blend | repel | gravity | speed | score | verdict | avg_drift | max_drift |
+|--------|------:|------:|--------:|------:|------:|---------|----------:|----------:|
+| TroyWeight | 0.8 | -0.8 | 0.4 | 0.15 | **0** | WOBBLE (both) | 0.5908 | 1.0830 |
+| TroyWeight | 0.8 | -0.8 | 0.4 | 0.25 | **0** | WOBBLE (both) | 0.5666 | 0.9700 |
+
+Both recovered cells **score 0** / wobble. The other 190 of 192 runs are **not in the staged extract**. Schema of the CSV: `prompt,blend,repulsion,gravity,speed,temp,sigma,score,verdict,avg_drift,max_drift,variance,first_100_chars`.
 
 ### 4. Adaptive-agency evidence packs — partial public, already hashed
 
@@ -229,29 +262,46 @@ Local and public: `/home/ruffianl/Hub/Projects/niodoo/niodoo-adaptive-agency/evi
 - Shuffle `real_56` six seeds: PASS on **1729** and **501013** (hash `8aa2de66…`); FAIL on 11, 227, 3313, 44497
 - Fillers (hex / plain English) FAIL at K=32 and K=56
 
-Matches the public durability README: two of six arrangements at 56 memories. Not a general reliability rate. Original stores stay personal.
+Matches the public durability README: two of six arrangements at 56 memories. Not a general reliability rate.
+
+**Original stores (unpublished by design, now located):**
+
+| path | size | what |
+|------|------|------|
+| `niodoo-adaptive-agency/runs/2026-08-21_official11_fullstore` | 198M | `remember_store.jsonl` **32** lines; plus `tel.jsonl` / `messages.json`. Content not copied here |
+| `.../official11_fullstore_cap128` | 252M | same family |
+| `.../official11_agency` | 179M | same family |
+| `niodoo-live/memory_store` | 636K | `niodoo_remembers.jsonl` **14** lines; chat jsonl empty |
+
+The hashed durability pack remains the public face. These trees stay off GitHub.
 
 ### 5. Path B manuscript — local-only, excluded on purpose
 
-`/home/ruffianl/Documents/Papers/Emitted_Control_Tags_Path_B.md` (+ `.pdf` / `.tex`). Gitignored. Not a missing extract. Mechanism of real tags is in `ULTIMA_NIODOO.md` §3.3.
+| file | bytes | sha256 |
+|------|------:|--------|
+| `Emitted_Control_Tags_Path_B.md` | 21,467 | `917085060d921a84b2f18ded249fc96261ef06ec39d31118340476d7d80cc865` |
+| `Emitted_Control_Tags_Path_B.tex` | 23,532 | `2f3fb75aa7ed55ce6140d4a442010da23d6d7e54ea829da37f29bfaf056b962d` |
+| `Emitted_Control_Tags_Path_B.pdf` | 72,955 | (render) |
+
+289 lines markdown. Gitignored. `provenance/CONTAMINATION.md` is why. Real tags: `ULTIMA_NIODOO.md` §3.3. Extra unasked tags from a plan are **not** copied into this index.
 
 ---
 
-## Still not a full extract (honest remainder)
+## Still not a full extract (after this pass)
 
-| item | why it is still open |
-|------|----------------------|
-| 2.35M unique telemetry records vs 6,311 ingested | STATUS.json is the receipt; no judged outcome column |
-| 14 wobble_sweep jsonl (2025-12-18) | listed, not scored here |
-| Original adaptive-agency personal stores | unpublished by design |
-| Private repo internals (splatrag engine, niodoo-runtime, c-council, …) | listed as private |
-| Remaining Path-B / emitted-control-tag material off public git | excluded, not invisible |
+| item | status now |
+|------|------------|
+| 2.35M telemetry records | **Census done.** Ingest **not** run (6,312 / 2,353,986). That is a pipeline job, not an index gap |
+| Wobble 192-run sweep | **Header + 2 cells scored** (both TroyWeight score 0 / WOBBLE). 190 cells missing from staged extract |
+| Adaptive-agency personal stores | **Located** (198–252M). Stay unpublished |
+| Private repos | **Expanded** (claim + path). `niodoo-ai` and `supersonic-semantic` are empty husks; `Leo` is screenshots |
+| Path B | **Hashed and left gitignored** |
 
 ---
 
 ## Sources for this file
 
-- GitHub: `gh repo list Ruffian-L --limit 200 --json …` (2026-08-22), plus public READMEs
+- GitHub: `gh repo list Ruffian-L --limit 200` (2026-08-22), public READMEs, private contents API
 - This git: `RESEARCH_MAP.md`, `CATALOG.md`, `silos/live/`, `silos/trail/`
-- Local: `Hub/Projects/splatrag/memory-niodoo-telemetry/corpus/STATUS.json` and first 20 machine jsonl rows; 6 `LOCK.json`; December 4,721-row file; `niodoo-adaptive-agency/evidence/`
-- Not used: SplatRAG MCP (server timed out this session)
+- Local: full scan of `memory-niodoo-telemetry/corpus/machine/niodoo-telemetry.jsonl` (615s); `ledger/ingested.jsonl` 6,312 rows; 14 wobble jsonl; 6 `LOCK.json`; December 4,721-row file; adaptive-agency `evidence/` + `runs/` sizes; private trees listed above
+- Not used: SplatRAG MCP (server timed out)

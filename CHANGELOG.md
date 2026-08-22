@@ -66,3 +66,10 @@ Keep this file short. Longer writeups go in the research log folder
 - Hypothesis: a hiring manager and a later seat can see the volume without walking four drives; inaction stops being the default.
 - Research: `research_logs/2026-08-22_master-work-index.md`
 - Agent: Grok (xAI)
+
+## 2026-08-22 — MASTER_WORK_INDEX remainder opened
+
+- Full-scanned the 78G telemetry jsonl (2,353,986 records, 0 errors), scored the 14 wobble files (2/192 cells recovered, both score 0), expanded 14 private repos, hashed Path B, located unpublished agency stores. Why: those rows were still labeled open after the first index.
+- Hypothesis: opening the remainder replaces hedge with census, scores, and paths.
+- Research: `research_logs/2026-08-22_master-work-index-remainder.md`
+- Agent: Grok (xAI)
