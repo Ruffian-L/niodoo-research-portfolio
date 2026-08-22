@@ -31,3 +31,7 @@ If the remainder is actually opened (full jsonl census, wobble extract scored, p
 - Ingesting 2.35M into SplatRAG is a pipeline job. Do not start it from an index turn.
 - Recovering the other 190 wobble cells needs the original 192-run CSV, which is not at the ghost archive path in the jsonl metadata.
 - Do not put Path B or personal stores in this git.
+
+## Addendum — delayed GitHub fetch
+
+Private `splatrag` default branch is `memory-ingest`. README services: Qdrant `127.0.0.1:6360` collection `export-conversations`; embedder `:8081` Qwen3-Embedding-8B 4096-d; optional basin labeler `:8082`; ANN `fast-hnsw`. Originated from public SplatRagBench. Row updated 2026-08-22 after the fetch landed.

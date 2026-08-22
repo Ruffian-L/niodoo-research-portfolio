@@ -66,7 +66,7 @@ Still private. Claim + evidence from GitHub contents and local trees. No persona
 
 | repo | created | updated | lang | one-line claim | evidence |
 |------|---------|---------|------|----------------|----------|
-| splatrag | 2026-07-30 | 2026-08-05 | Rust | v3 local Gaussian-splat memory store (cold log, BM25+HNSW, picker) | GitHub private. Live tree: `splatrag-clean` **6.0G**, `Cargo.toml` name=splatrag **3.0.0**. Python rebuild stub: `Hub/Projects/splatrag/splatrag` 90M |
+| splatrag | 2026-07-30 | 2026-08-05 | Rust | v3 local Gaussian-splat memory store (cold log, BM25+HNSW, picker) | Private GitHub default branch **`memory-ingest`**. README: Qdrant `:6360` collection `export-conversations`; embedder `:8081` Qwen3-Embedding-8B **4096-d**; ANN `fast-hnsw`. Live tree: `splatrag-clean` **6.0G**, `Cargo.toml` **3.0.0** |
 | niodoo-live-private | 2026-07-23 | 2026-07-23 | Rust | Private working mirror of the live runtime. Not for publication | local `/home/ruffianl/Hub/Projects/niodoo/niodoo-live-private` 74M; last commit `233429c` 2026-07-15. `SCOREBOARD.md` + `WHITEPAPER.md` |
 | niodoo-runtime | 2026-06-13 | 2026-06-13 | Rust | Clean rebuild lane: mock backend, command-gated claims, no hidden control paths | GitHub `README.md`: `cargo test`; `cargo run -- run --backend mock`. Excludes CUDA/SplatRAG/GGUF |
 | latent-trajectory-codec | 2026-03-28 | 2026-07-26 | Python | 64D latent transport + VQ codebook | local ghost 32M. `CLAIMS.md`: M5 8/8 specialists; M7.5 VQ 256 / 0 dead / 320× / exact round-trip; M8 4 forcing types, max energy < 0.192 |

@@ -73,3 +73,10 @@ Keep this file short. Longer writeups go in the research log folder
 - Hypothesis: opening the remainder replaces hedge with census, scores, and paths.
 - Research: `research_logs/2026-08-22_master-work-index-remainder.md`
 - Agent: Grok (xAI)
+
+## 2026-08-22 — Private splatrag README onto the index
+
+- Added the private GitHub default branch (`memory-ingest`) and the README service map (Qdrant :6360, Qwen3-Embedding-8B 4096-d, fast-hnsw) to the splatrag row. Why: the leftover GitHub fetch finished after the remainder push and had those facts.
+- Hypothesis: the private engine row matches the actual GitHub README, not only the local clean tree.
+- Research: `research_logs/2026-08-22_master-work-index-remainder.md` (same subject)
+- Agent: Grok (xAI)
