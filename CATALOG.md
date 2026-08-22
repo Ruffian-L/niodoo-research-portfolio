@@ -1,6 +1,6 @@
 # Catalog
 
-What is in this working directory, as of 2026-08-20.
+What is in this working directory, as of 2026-08-22.
 `git` tracks rows marked **in git**.
 
 Do not reconcile papers against each other. Use `RESEARCH_MAP.md` to find a row,
@@ -11,7 +11,10 @@ Do not reconcile papers against each other. Use `RESEARCH_MAP.md` to find a row,
 | File | Status |
 |------|--------|
 | `README.md` | How to use this git. Smarter runtimes, smarter AI. |
-| `RESEARCH_MAP.md` | Living index: hypothesis, last mutation, status |
+| `MASTER_WORK_INDEX.md` | Volume index of the whole body of work (public GitHub + this git + opened local corpora) |
+| `MASTER_WORK_INDEX.csv` | Same rows, machine-readable |
+| `HIRE.md` | 60-second hiring-manager page. Not a second website. |
+| `RESEARCH_MAP.md` | Living paper index: hypothesis, last mutation, status |
 | `NAMES.md` | Dated local names, not a brand |
 | `CHANGELOG.md` | Mutation spine (why on every action) |
 | `silos/live/` | Findings that survived their own check |

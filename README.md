@@ -19,9 +19,11 @@ Take the two silos separately:
 
 Do not merge the silos into a scoreboard. Do not rank them. They are two drawers.
 
-The living index is [`RESEARCH_MAP.md`](RESEARCH_MAP.md): every paper, its active hypothesis, last mutation, and status. Dated local names (Lumina, lumen, echo, Shep, Echo Memoria) are in [`NAMES.md`](NAMES.md). They are **dated local artifacts**, not a brand.
+The living **paper** index is [`RESEARCH_MAP.md`](RESEARCH_MAP.md): every paper, its active hypothesis, last mutation, and status. The living **volume** index is [`MASTER_WORK_INDEX.md`](MASTER_WORK_INDEX.md). Dated local names (Lumina, lumen, echo, Shep, Echo Memoria) are in [`NAMES.md`](NAMES.md). They are **dated local artifacts**, not a brand.
 
 The field face is **SplatRAG v3**, not a page in this repo. `sp start` opens Basin Field (COMMAND / DREAM / INSPECT). See [`FACE.md`](FACE.md). This git is the papers and the two silos.
+
+Volume of the whole body of work (every public repo, every paper, opened local corpora): [`MASTER_WORK_INDEX.md`](MASTER_WORK_INDEX.md) · CSV [`MASTER_WORK_INDEX.csv`](MASTER_WORK_INDEX.csv). Recruiter 60-second read: [`HIRE.md`](HIRE.md).
 
 ## What we are actually measuring
 
@@ -54,7 +56,9 @@ The agent is the **loop**, not the weight file.
 
 ## Map, changelog, names
 
-- [`RESEARCH_MAP.md`](RESEARCH_MAP.md) — master index (hypothesis, last mutation, status)
+- [`MASTER_WORK_INDEX.md`](MASTER_WORK_INDEX.md) — volume of the work (repos, papers, silos, local corpora)
+- [`HIRE.md`](HIRE.md) — 60-second hire spine
+- [`RESEARCH_MAP.md`](RESEARCH_MAP.md) — paper index (hypothesis, last mutation, status)
 - [`CHANGELOG.md`](CHANGELOG.md) — short. Every mutation gets a why. Living hypothesis log.
 - [`NAMES.md`](NAMES.md) — Lumina → lumen / echo, Shep, Echo Memoria. Dated. Not a product line.
 - [`CATALOG.md`](CATALOG.md) — what is in git and what stays on disk
@@ -66,15 +70,25 @@ Shep room → Echo Memoria tree → control-channel dispatch → durable store �
 
 ## Code
 
+Full table with claim + evidence: [`MASTER_WORK_INDEX.md`](MASTER_WORK_INDEX.md). Short list:
+
 | Repo | What it is |
 |------|------------|
+| [niodoo-adaptive-agency](https://github.com/Ruffian-L/niodoo-adaptive-agency) | Agency record; two seals; Zenodo |
 | [niodoo-hidden-state-steering](https://github.com/Ruffian-L/niodoo-hidden-state-steering) | Hidden-state correction |
-| [niodoo-adaptive-agency](https://github.com/Ruffian-L/niodoo-adaptive-agency) | Agency record; two seals |
 | [Niodoo-Physics-LLM](https://github.com/Ruffian-L/Niodoo-Physics-LLM) | Force engine |
 | [hydrodynamic-swarm](https://github.com/Ruffian-L/hydrodynamic-swarm) | Residual-stream physics + splat memory |
 | [SplatRagBench](https://github.com/Ruffian-L/SplatRagBench) | Hybrid retrieval |
+| [cathedral-beir](https://github.com/Ruffian-L/cathedral-beir) | Pure 768D cosine BEIR |
 | [physics-of-friendship-mountaincar-rl](https://github.com/Ruffian-L/physics-of-friendship-mountaincar-rl) | Q-SMA / dream replay |
+| [YinYangQSMA](https://github.com/Ruffian-L/YinYangQSMA) | Q-SMA MountainCar (Rust) |
 | [physicslang](https://github.com/Ruffian-L/physicslang) | Control law as composition |
 | [niodoo-rocket-core](https://github.com/Ruffian-L/niodoo-rocket-core) | Correction → process death → next process |
+| [niodoo-autonomous-self-correction-and-dynamic-control-loops-in-ai](https://github.com/Ruffian-L/niodoo-autonomous-self-correction-and-dynamic-control-loops-in-ai) | Verbal control + activation steering |
+| [jlens-gguf](https://github.com/Ruffian-L/jlens-gguf) | Disposition from inside GGUF |
+| [ontological-inversion](https://github.com/Ruffian-L/ontological-inversion) | Memory polarity flip |
+| [cargo-bless](https://github.com/Ruffian-L/cargo-bless) | Blessed-crates checker (crates.io) |
+| [niodoo-tcs](https://github.com/Ruffian-L/niodoo-tcs) | Topology / TCS (not wired into decode) |
+| [Niodoo-TCT](https://github.com/Ruffian-L/Niodoo-TCT) | nToken / homology scaffold |
 
 MIT. Corresponding author: Jason Van Pham. See [`AUTHORSHIP.md`](AUTHORSHIP.md).

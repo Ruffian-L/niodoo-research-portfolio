@@ -58,3 +58,11 @@ Keep this file short. Longer writeups go in the research log folder
 - Agent: Grok (xAI)
 - Research: `research_logs/2026-08-20_ungitignore-agents-md.md`
 
+
+## 2026-08-22 — MASTER_WORK_INDEX of the whole body of work
+
+- Compiled `MASTER_WORK_INDEX.md` + CSV (79 rows) + `HIRE.md` from live GitHub (`gh repo list` 17 public / 14 private) plus this git plus opened local paths. Why: the job artifact was still a hedge; volume has to be one file.
+- Expanded every public repo with one-line claim + evidence. Filled SplatRAG 103G STATUS, 6 LOCK.json packs, 4,721 December scored rows, hashed adaptive-agency evidence. Why: local-only was being listed as pending instead of opened.
+- Hypothesis: a hiring manager and a later seat can see the volume without walking four drives; inaction stops being the default.
+- Research: `research_logs/2026-08-22_master-work-index.md`
+- Agent: Grok (xAI)

@@ -20,7 +20,7 @@ Shep room
 
 Path B as a **mechanism** lives in the ultima. The Path B *manuscript* that grew extra tags from a plan is excluded. See `provenance/CONTAMINATION.md`.
 
-Last map mutation: **2026-08-20**.
+Last map mutation: **2026-08-22** (volume index added: `MASTER_WORK_INDEX.md` — repos and local corpora, not a paper-hypothesis row).
 
 ---
 
