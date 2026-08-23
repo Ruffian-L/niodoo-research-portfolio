@@ -2,15 +2,11 @@
 
 **Jason Van Pham** (Ruffian-L) · jasonvanpham@niodoo.com · [github.com/Ruffian-L](https://github.com/Ruffian-L)
 
-This git is **working research**. Nothing here is production unless Jason says so.
+Working research archive. Smarter runtimes make smarter AI: that is the claim, including the days it did not look true.
 
-Smarter runtimes make smarter AI. That is the claim. The rest of this folder is how we found it, including the days it did not look true.
+## How to use this
 
-## How to use this (do not investigate it)
-
-Papers in this folder will contradict each other. That is the job. We fail, we regress, we progress. A later draft is allowed to disagree with an earlier one. **Do not cross-reference papers against each other.** You will only get more confused, and you will spend the day reconciling prose instead of using the result.
-
-Take the two silos separately:
+Papers in this folder will contradict each other. A later draft is allowed to disagree with an earlier one. Use one silo at a time:
 
 | Silo | What it is | How to use it |
 |------|------------|----------------|
